@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+<!-- <div class="login-container mat-elevation-z5">
+  
+  <h3 class="montFont" style="font-weight: 600">Digibank Account Sign In</h3> 
+    <form class="login-form" (submit)="login()">
+      <label for="username">Username</label>
+      <input type="text" id="username" [(ngModel)]="username" name="username"  required>
+  
+      <label for="password">Password</label>
+      <input type="password" id="password" [(ngModel)]="password" name="password"  required>
+  
+      <button type="submit">Login</button>
+    </form>
+  </div> -->
+
+  
+  <div class="container">
+    <div class="color-container">
+      <div class="image-container">
+      <h1 style="color: white;display: inline; font-family: sans-serif; font-size: 30px;">  <i class="fas fa-university" style="vertical-align: middle"></i>
+        <span style="font-weight: 600;vertical-align: middle;margin-left: 15px;">DIGIBANK</span></h1>
+    <p style="color: white;font-size: 20px;margin-top: 20px;">The bank for a changing world!</p>
+    <p style="color: white;font-size: 15px;margin: 40px;">Welcome to Digibank - Your Gateway to Financial Excellence. Securely access your accounts and experience a world of seamless banking services. Your financial journey begins here!</p>
+  </div> </div>
+
+ 
+    <div class="input-container">
+      <div class="login-container mat-elevation-z5">
+        <h3 class="montFont" style="color: #205c60;;font-weight: 500;font-size: 18px;">Digibank Banking Portal Sign In</h3> 
+          <form class="login-form" (submit)="login()">
+           
+            <input on-focus="resetMsg()"  placeholder="Enter Username" type="text" id="username" [(ngModel)]="username" name="username"  required>
+            <p *ngIf="showRequiredUsername" style="margin-bottom: 0px;position: relative; left: -110px; font-size: 12px;top: -10px;color: red;">*username is required</p>
+
+            <input on-focus="resetMsg()" placeholder="Enter Password" type="password" id="password" [(ngModel)]="password" name="password"  required>
+            <p *ngIf="showRequiredPassword" style="margin-bottom: 0px;position: relative; left: -110px; font-size: 12px;top: -10px;color: red;">*password is required</p>
+
+            <p style="text-align: start; font-size: 13px; margin-top: 10px;margin-bottom: 10px;">By clicking the login button the user agrees unconditionally to be bound by the terms of use of this site prevailing from time to time</p>
+            <h3 style="margin-bottom: 10px; color: red;">{{msg}}</h3>
+            <button type="submit">Login</button>
+          </form>
+        </div>
+     
+
+    </div>
+    <div class="msg-container mat-elevation-z5" style="position: absolute;">
+      <p>❁ {{ currentMessage }} ❁</p>
+    </div>
+  </div>
+
+  <!-- <div class="container">
+    <div class="forms-container">
+      <div class="form-control signin-form">
+        <form action="#">
+          <h2>Digibank Account Sign In</h2>
+          <input type="text" placeholder="Username" required />
+          <input type="password" placeholder="Password" required />
+          <button>Sign In</button>
+        </form>
+      </div>
+    </div>
+    <div class="intros-container">
+      <div class="intro-control signin-intro">
+        <div class="intro-control__inner">
+          <h2>DIGIBANK</h2>
+          <p>Internt banking portal</p>
+          <p>
+            Welcome back! We are so happy to have you here. It's great to see you again. We hope you had a safe and enjoyable time away.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  
+

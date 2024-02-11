@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+<div class="toolbar mat-elevation-z5">
+  <div style="display: inline">
+  <h1 style="color: white;display: inline; font-family: sans-serif; font-size: 30px;">  <i class="fas fa-university" style="vertical-align: middle"></i>
+    <span style="vertical-align: middle;margin-left: 15px;">DIGIBANK</span></h1>
+  <p style="color: white;display: inline; margin-left: 50px">Internet Banking Portal</p>
+</div>
+  <br>
+  <br>
+  <ul>
+    <li><button (click)="navigateToDashboard()"> <mat-icon style="vertical-align: middle;">dashboard</mat-icon><span style="vertical-align: middle; margin-left: 5px;">Account Summary</span></button></li>
+    <li><button class="active"> <mat-icon style="vertical-align: middle;">history</mat-icon><span style="vertical-align: middle; margin-left: 5px;">Transactions</span></button></li>
+    <li><button (click)="navigateToTransfer()"> <mat-icon style="vertical-align: middle;">swap_horiz</mat-icon><span style="vertical-align: middle; margin-left: 5px;">Transfer Money</span></button></li>
+
+    <li style="float:right"><button (click)="logout()"><mat-icon style="vertical-align: middle;">exit_to_app</mat-icon>
+      <span style="vertical-align: middle;  margin-left: 5px;">Logout</span></button></li>
+      <li style="float:right"><button [routerLink]="['/profile', first_name]">
+        <mat-icon style="vertical-align: middle;">person</mat-icon>
+        <span style="vertical-align: middle;  margin-left: 5px;">{{ first_name }}
+        </span></button></li>
+  </ul>
+</div>
+
+
+<div class="box">
+  <div class="group">
+    <div class="overlap-group">
+      <div class="rectangle"></div>
+      <div class="text-wrapper">All transactions</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="example-header">
+<input matInput (keyup)="applyFilter($event)" placeholder="Search here...">
+</div>
+
+  <div class="example-container mat-elevation-z8">
+  
+    <mat-table [dataSource]="dataSource" matSort>
+  
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="acc_number">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Source Account </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.acc_number}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="destination_acc">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Destination Account </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.destination_acc}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="trans_amt">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Amount </mat-header-cell>
+        <mat-cell *matCellDef="let row">{{formatBalance(calculateEquivalentValue(row.trans_amt))}}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="date">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Date </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{getDate(row.date)}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Description </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.description}} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row  class="tablehover"  *matRowDef="let row; columns: displayedColumns;">
+      </mat-row>
+    </mat-table>
+  
+    <mat-paginator [pageSizeOptions]="[10, 25, 100]"></mat-paginator>
+  </div>

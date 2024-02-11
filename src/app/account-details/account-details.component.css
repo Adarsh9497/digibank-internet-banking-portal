@@ -1,0 +1,62 @@
+.mat-elevation-z8 {
+  width: 80%;
+  margin: 20px auto;
+}
+
+table {
+  width: 100%;
+}
+
+
+.toolbar {
+  background-color: #205c60;
+  margin: 0;
+  padding-left: 10px;
+  padding-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+ul {
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #205c60;
+}
+
+li {
+  float: left;
+}
+
+button {
+  display: block;
+  padding: 15px;
+  background-color: #205c60;
+  color: white;
+  border: none;
+}
+
+li button:hover {
+  background-color: #266E73;
+  color: white;
+  font-weight: 500;
+}
+
+
+.style-card-1{
+  display: flex;
+  vertical-align: middle;
+}
+
+.style-card-2{
+  display: flex;
+  margin: 20px;
+  width: 30%;
+  vertical-align: middle;
+}
+
+
+.tablehover:hover{
+  background-color: #ecf8f9;
+}

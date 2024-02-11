@@ -1,0 +1,552 @@
+{
+  "routes": {
+    "/update-balance": "/accsummary"
+  },
+  "currency": {
+    "currency": "USD"
+  },
+  "login_user": [
+    {
+      "fname": "adarsh",
+      "password": "pass1",
+      "f_name": "Adarsh Soni",
+      "address": "pune",
+      "email": "adarsh.soni@oracle.com",
+      "p_number": 1234567899
+    },
+    {
+      "fname": "nayan",
+      "password": "pass2",
+      "f_name": "Nayan Mehta",
+      "address": "pune",
+      "email": "nayanmehta3344@gmail.com",
+      "p_number": 1234567898
+    },
+    {
+      "fname": "1",
+      "password": "1",
+      "f_name": "user3",
+      "l_name": "user_lastname",
+      "address": "pune",
+      "email": "",
+      "p_number": 1234567899
+    }
+  ],
+  "accsummary": [
+    {
+      "fname": "adarsh",
+      "acc_number": 1009001111,
+      "acc_type": "Savings",
+      "balance": 9000.779999999999,
+      "id": 1
+    },
+    {
+      "fname": "adarsh",
+      "acc_number": 1009002222,
+      "acc_type": "Current",
+      "balance": 55991.22,
+      "id": 2
+    },
+    {
+      "fname": "adarsh",
+      "acc_number": 1009003333,
+      "acc_type": "Savings",
+      "balance": 11999,
+      "id": 3
+    },
+    {
+      "fname": "adarsh",
+      "acc_number": 1009004444,
+      "acc_type": "Savings",
+      "balance": 28600,
+      "id": 4
+    },
+    {
+      "fname": "adarsh",
+      "acc_number": 1009005555,
+      "acc_type": "Savings",
+      "balance": 34298,
+      "id": 5
+    },
+    {
+      "fname": "adarsh",
+      "acc_number": 1009006666,
+      "acc_type": "Fixed Deposit",
+      "balance": 17000,
+      "id": 6
+    },
+    {
+      "fname": "adarsh",
+      "acc_number": 1009007777,
+      "acc_type": "Savings",
+      "balance": 21500,
+      "id": 7
+    },
+    {
+      "fname": "adarsh",
+      "acc_number": 1009008888,
+      "acc_type": "Savings",
+      "balance": 32601,
+      "id": 8
+    },
+    {
+      "fname": "nayan",
+      "acc_number": 2009001111,
+      "acc_type": "Fixed Deposit",
+      "balance": 90700,
+      "id": 9
+    },
+    {
+      "fname": "nayan",
+      "acc_number": 2009002222,
+      "acc_type": "Savings",
+      "balance": 110000,
+      "id": 10
+    },
+    {
+      "fname": "nayan",
+      "acc_number": 2009003333,
+      "acc_type": "Fixed Deposit",
+      "balance": 131000,
+      "id": 11
+    },
+    {
+      "fname": "nayan",
+      "acc_number": 2009004444,
+      "acc_type": "Current",
+      "balance": 103310,
+      "id": 12
+    },
+    {
+      "fname": "nayan",
+      "acc_number": 2009005555,
+      "acc_type": "Current",
+      "balance": 14000,
+      "id": 13
+    }
+  ],
+  "accdetails": [
+    {
+      "acc_number": 1009002222,
+      "destination_acc": "1009001111",
+      "trans_amt": 700,
+      "date": 1702210295544,
+      "description": "Self Transfer",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 47300,
+      "destClosingBalance": 7700,
+      "id": 1
+    },
+    {
+      "acc_number": 1009001111,
+      "destination_acc": "1009003333",
+      "trans_amt": 4100,
+      "date": 1702223436428,
+      "description": "Self Transfer",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 3600,
+      "destClosingBalance": 100,
+      "id": 2
+    },
+    {
+      "acc_number": 1009002222,
+      "destination_acc": "1009003333",
+      "trans_amt": 300,
+      "date": 1702226749891,
+      "description": "Self Transfer",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 47000,
+      "destClosingBalance": 400,
+      "id": 3
+    },
+    {
+      "acc_number": 1009004444,
+      "destination_acc": "1009003333",
+      "trans_amt": 300,
+      "date": 1702227595261,
+      "description": "Self Transfer",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 33700,
+      "destClosingBalance": 700,
+      "id": 4
+    },
+    {
+      "acc_number": 1009002222,
+      "destination_acc": "1009003333",
+      "trans_amt": 7000,
+      "date": 1702238009749,
+      "description": "Self Transfer",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 40000,
+      "destClosingBalance": 7700,
+      "id": 5
+    },
+    {
+      "acc_number": 2009002222,
+      "destination_acc": "1009001111",
+      "trans_amt": 10000,
+      "date": 1702238213567,
+      "description": "UPI transfer",
+      "trans_type": "Debit",
+      "fname": "nayan",
+      "srcClosingBalance": 110000,
+      "destClosingBalance": 13600,
+      "id": 6
+    },
+    {
+      "acc_number": 1009002222,
+      "destination_acc": "1009001111",
+      "trans_amt": 400,
+      "date": 1702314348143,
+      "description": "UPI transfer",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 39600,
+      "destClosingBalance": 14000,
+      "id": 7
+    },
+    {
+      "acc_number": 2009005555,
+      "destination_acc": "1009001111",
+      "trans_amt": 6000,
+      "date": 1702314444194,
+      "description": "Rent",
+      "trans_type": "Debit",
+      "fname": "nayan",
+      "srcClosingBalance": 19000,
+      "destClosingBalance": 20000,
+      "id": 8
+    },
+    {
+      "acc_number": 1009005555,
+      "destination_acc": "2009003333",
+      "trans_amt": 800,
+      "date": 1702317766779,
+      "description": "Wifi",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 34200,
+      "destClosingBalance": 135800,
+      "id": 9
+    },
+    {
+      "acc_number": 1009006666,
+      "destination_acc": "2009003333",
+      "trans_amt": 900,
+      "date": 1702317818669,
+      "description": "Electricity",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 24100,
+      "destClosingBalance": 136700,
+      "id": 10
+    },
+    {
+      "acc_number": 1009001111,
+      "destination_acc": "1009001111",
+      "trans_amt": 22,
+      "date": 1702318729101,
+      "description": "Test Transaction",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 19978,
+      "destClosingBalance": 20000,
+      "id": 11
+    },
+    {
+      "acc_number": 1009008888,
+      "destination_acc": "2009004444",
+      "trans_amt": 13000,
+      "date": 1702323162933,
+      "description": "Rent",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 32000,
+      "destClosingBalance": 103000,
+      "id": 12
+    },
+    {
+      "acc_number": 1009001111,
+      "destination_acc": "2009004444",
+      "trans_amt": 310,
+      "date": 1702323362490,
+      "description": "Rent",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 19690,
+      "destClosingBalance": 103310,
+      "id": 13
+    },
+    {
+      "acc_number": 1009002222,
+      "destination_acc": "1009001111",
+      "trans_amt": 10,
+      "date": 1702324272893,
+      "description": "testing",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 39590,
+      "destClosingBalance": 19700,
+      "id": 14
+    },
+    {
+      "acc_number": 1009001111,
+      "destination_acc": "1009002222",
+      "trans_amt": 19000,
+      "date": 1702324615373,
+      "description": "test",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 700,
+      "destClosingBalance": 58590,
+      "id": 15
+    },
+    {
+      "acc_number": 1009003333,
+      "destination_acc": "1009001111",
+      "trans_amt": 700,
+      "date": 1702368464253,
+      "description": "test",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 7000,
+      "destClosingBalance": 1400,
+      "id": 16
+    },
+    {
+      "acc_number": 2009005555,
+      "destination_acc": "1009003333",
+      "trans_amt": 5000,
+      "date": 1702368538198,
+      "description": "mobile recharge",
+      "trans_type": "Debit",
+      "fname": "nayan",
+      "srcClosingBalance": 14000,
+      "destClosingBalance": 12000,
+      "id": 17
+    },
+    {
+      "acc_number": 1009002222,
+      "destination_acc": "1009001111",
+      "trans_amt": 5000,
+      "date": 1702401441145,
+      "description": "mobile recharge",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 53590,
+      "destClosingBalance": 6400,
+      "id": 18
+    },
+    {
+      "acc_number": 1009002222,
+      "destination_acc": "1009001111",
+      "trans_amt": 166.78,
+      "date": 1702403092977,
+      "description": "testing",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 53423.22,
+      "destClosingBalance": 6566.78,
+      "id": 19
+    },
+    {
+      "acc_number": 1009002222,
+      "destination_acc": "1009001111",
+      "trans_amt": 100,
+      "date": 1702403138559,
+      "description": "mobile recharge",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 53323.22,
+      "destClosingBalance": 6666.78,
+      "id": 20
+    },
+    {
+      "acc_number": 1009002222,
+      "destination_acc": "1009001111",
+      "trans_amt": 334,
+      "date": 1702447647818,
+      "description": " ",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 52989.22,
+      "destClosingBalance": 7000.78,
+      "id": 21
+    },
+    {
+      "acc_number": 1009003333,
+      "destination_acc": "1009001111",
+      "trans_amt": 1,
+      "date": 1702454944032,
+      "description": "Test",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 11999,
+      "destClosingBalance": 7001.78,
+      "id": 22
+    },
+    {
+      "acc_number": 1009005555,
+      "destination_acc": "1009002222",
+      "trans_amt": 1,
+      "date": 1702454988463,
+      "description": "a",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 34199,
+      "destClosingBalance": 52990.22,
+      "id": 23
+    },
+    {
+      "acc_number": 1009005555,
+      "destination_acc": "1009008888",
+      "trans_amt": 1,
+      "date": 1702455082806,
+      "description": "a",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 34198,
+      "destClosingBalance": 32001,
+      "id": 24
+    },
+    {
+      "acc_number": 1009004444,
+      "destination_acc": "1009002222",
+      "trans_amt": 5000,
+      "date": 1702455231269,
+      "description": "test",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 28700,
+      "destClosingBalance": 57990.22,
+      "id": 25
+    },
+    {
+      "acc_number": 1009006666,
+      "destination_acc": "1009007777",
+      "trans_amt": 6700,
+      "date": 1702455359879,
+      "description": "bil",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 17400,
+      "destClosingBalance": 21700,
+      "id": 26
+    },
+    {
+      "acc_number": 1009006666,
+      "destination_acc": "1009008888",
+      "trans_amt": 400,
+      "date": 1702456404177,
+      "description": "xyz",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 17000,
+      "destClosingBalance": 32401,
+      "id": 27
+    },
+    {
+      "acc_number": 1009007777,
+      "destination_acc": "1009008888",
+      "trans_amt": 200,
+      "date": 1702456827586,
+      "description": "xyz",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 21500,
+      "destClosingBalance": 32601,
+      "id": 28
+    },
+    {
+      "acc_number": 1009005555,
+      "destination_acc": "1009008888",
+      "trans_amt": 10000,
+      "date": 1702457155318,
+      "description": "abcd",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 24198,
+      "destClosingBalance": 42601,
+      "id": 29
+    },
+    {
+      "acc_number": 1009008888,
+      "destination_acc": "1009005555",
+      "trans_amt": 10000,
+      "date": 1702457189998,
+      "description": "abcd",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 32601,
+      "destClosingBalance": 34198,
+      "id": 30
+    },
+    {
+      "acc_number": 2009003333,
+      "destination_acc": "2009001111",
+      "trans_amt": 5700,
+      "date": 1702457521014,
+      "description": "xyz",
+      "trans_type": "Debit",
+      "fname": "nayan",
+      "srcClosingBalance": 131000,
+      "destClosingBalance": 90700,
+      "id": 31
+    },
+    {
+      "acc_number": 1009004444,
+      "destination_acc": "1009005555",
+      "trans_amt": 100,
+      "date": 1702467614010,
+      "description": "water bill",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 28600,
+      "destClosingBalance": 34298,
+      "id": 32
+    },
+    {
+      "acc_number": 1009002222,
+      "destination_acc": "1009001111",
+      "trans_amt": 2500,
+      "date": 1702469139202,
+      "description": "xyz",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 55491.22,
+      "destClosingBalance": 9500.779999999999,
+      "id": 33
+    },
+    {
+      "acc_number": 1009001111,
+      "destination_acc": "1009002222",
+      "trans_amt": 500,
+      "date": 1702552160699,
+      "description": "test",
+      "trans_type": "Debit",
+      "fname": "adarsh",
+      "srcClosingBalance": 9000.779999999999,
+      "destClosingBalance": 55991.22,
+      "id": 34
+    }
+  ],
+  "payees": [
+    {
+      "acc_number": 12345671,
+      "acc_type": "Savings"
+    },
+    {
+      "acc_number": 12345672,
+      "acc_type": "Current"
+    },
+    {
+      "acc_number": 12345673,
+      "acc_type": "Fixed Deposit"
+    }
+  ]
+}

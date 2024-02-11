@@ -1,0 +1,108 @@
+.mat-elevation-z8 {
+  width: 80%;
+  margin: 20px auto;
+}
+
+table {
+  width: 100%;
+}
+
+
+.toolbar {
+  background-color: #205c60;
+  margin: 0;
+  padding-left: 10px;
+  padding-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+ul {
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #205c60;
+}
+
+li {
+  float: left;
+}
+
+button {
+  display: block;
+  padding: 15px;
+  background-color: #205c60;
+  color: white;
+  border: none;
+}
+
+li button:hover {
+  background-color: #266E73;
+  color: white;
+  font-weight: 500;
+}
+
+.active {
+  background-color: white;
+  color: #266E73;
+  font-weight: 600;
+}
+
+
+.account-summary {
+  margin: 20px;
+}
+
+.welcome {
+  margin-bottom: 20px;
+}
+
+.mat-table {
+  width: 100%;
+}
+
+.mat-header-row {
+  background-color: #205c60;
+  color: #333;
+  font-weight: bold;
+}
+
+.card {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
+  min-width: 20%;
+  height: fit-content;
+  background-color: #3a7ca5;
+  border-radius: 4px;
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.sub-card {
+  position: relative; height: 10px; background-color:whitesmoke; color: black;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
+  min-width: 20%;
+ 
+  border-radius: 4px;
+ 
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sub-card:hover {
+  position: relative; height: 10px; background-color:#c6e9ec
+  ; color: black;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
+  min-width: 20%;
+  border-radius: 4px;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

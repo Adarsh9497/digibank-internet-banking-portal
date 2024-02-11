@@ -1,1 +1,112 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+.box .group {
+  margin-top: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 25px;
+  height:35px ;
+}
+
+.box .overlap-group {
+  height: 35px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1.5px solid;
+  border-color: #dadada;
+  box-shadow: 0px 2px 4px #00000040;
+}
+
+.box .rectangle {
+  
+  width: 20px;
+  height: 35px;
+  top: -2px;
+  left: -2px;
+  background-color: #266e73;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.box .text-wrapper {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-family: "Montserrat-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  position: relative;
+  line-height: normal;
+  bottom: 36px;
+  left: 15px;
+}
+
+
+.styled-table {
+  margin-left: 20px;
+  font-size: 1.1em;
+  font-family: sans-serif;
+  width: 96%;
+  height: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table-b {
+  margin-left: 20px;
+  margin-right:20px;
+  font-size: 1.1em;
+  font-family: sans-serif;
+  min-width: 20%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr, .styled-table-b thead tr{
+  background-color: #205c60;
+  color: #ffffff;
+  text-align: left;
+  border-radius: 15px;
+}
+
+.styled-table-b th,.styled-table-b td {
+  padding: 12px 15px;
+  margin-right: 20px;
+  width: 20%;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    width: 373px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 1px solid #009879;
+}
+
+.styled-table tbody tr.active-row:hover {
+  font-weight: bold;
+  color: #205c60;
+  background-color: #ecf8f9;
+  cursor: pointer;
+}

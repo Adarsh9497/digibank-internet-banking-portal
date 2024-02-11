@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+<div class="toolbar mat-elevation-z5">
+  <div style="display: inline">
+  <h1 style="color: white;display: inline; font-family: sans-serif; font-size: 30px;">  <i class="fas fa-university" style="vertical-align: middle"></i>
+    <span style="vertical-align: middle;margin-left: 15px;">DIGIBANK</span></h1>
+  <p style="color: white;display: inline; margin-left: 50px">Internet Banking Portal</p>
+</div>
+  <br>
+  <br>
+  <ul>
+    <li><button (click)="navigateToDashboard()"> <mat-icon style="vertical-align: middle;">dashboard</mat-icon><span style="vertical-align: middle; margin-left: 5px;">Account Summary</span></button></li>
+    <li><button (click)="navigateToTransaction()"> <mat-icon style="vertical-align: middle;">history</mat-icon><span style="vertical-align: middle; margin-left: 5px;">Transactions</span></button></li>
+    <li><button (click)="navigateToTransfer()"> <mat-icon style="vertical-align: middle;">swap_horiz</mat-icon><span style="vertical-align: middle; margin-left: 5px;">Transfer Money</span></button></li>
+
+    <li style="float:right"><button (click)="logout()"><mat-icon style="vertical-align: middle;">exit_to_app</mat-icon>
+      <span style="vertical-align: middle;  margin-left: 5px;">Logout</span></button></li>
+    <li style="float:right"><button class="active">
+      <mat-icon style="vertical-align: middle;">person</mat-icon>
+      <span style="vertical-align: middle;  margin-left: 5px;" >
+      </span></button></li>
+  </ul>
+</div>
+
+
+<div class="box">
+  <div class="group">
+    <div class="overlap-group">
+      <div class="rectangle"></div>
+      <div class="text-wrapper">User Information</div>
+    </div>
+  </div>
+</div>
+
+<mat-card class="mat-elevation-z8 profile-card">
+    <mat-card-content>
+      <div class="profile-info"   *ngIf="userProfile">
+        <div class="info">
+          <p>Name:</p>
+          <h3 >{{userProfile.f_name}}</h3>
+        </div>
+        <br>
+        <div class="info">
+          <p>Email:</p>
+          <h3>{{ userProfile.email }}</h3>
+        </div>
+        <br>
+        <div class="info">
+          <p>Phone:</p>
+          <h3 >{{ userProfile.p_number }}</h3>
+        </div>
+        <br>
+        <div class="info">
+          <p>Address:</p>
+          <h3 >{{ userProfile.address }}</h3>
+        </div>
+       
+      </div>
+    </mat-card-content>
+  </mat-card>
+  

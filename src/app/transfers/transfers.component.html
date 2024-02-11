@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+<div class="toolbar mat-elevation-z5">
+  <div style="display: inline">
+  <h1 style="color: white;display: inline; font-family: sans-serif; font-size: 30px;">  <i class="fas fa-university" style="vertical-align: middle"></i>
+    <span style="vertical-align: middle;margin-left: 15px;">DIGIBANK</span></h1>
+  <p style="color: white;display: inline; margin-left: 50px">Internet Banking Portal</p>
+</div>
+  <br>
+  <br>
+  <ul>
+    <li><button (click)="navigateToDashboard()"> <mat-icon style="vertical-align: middle;">dashboard</mat-icon><span style="vertical-align: middle; margin-left: 5px;">Account Summary</span></button></li>
+    <li><button (click)="navigateToTransaction()"> <mat-icon style="vertical-align: middle;">history</mat-icon><span style="vertical-align: middle; margin-left: 5px;">Transactions</span></button></li>
+    <li><button class="active"> <mat-icon style="vertical-align: middle;">swap_horiz</mat-icon><span style="vertical-align: middle; margin-left: 5px;">Transfer Money</span></button></li>
+
+    <li style="float:right"><button (click)="logout()"><mat-icon style="vertical-align: middle;">exit_to_app</mat-icon>
+      <span style="vertical-align: middle;  margin-left: 5px;">Logout</span></button></li>
+    <li style="float:right"><button [routerLink]="['/profile', first_name]">
+      <mat-icon style="vertical-align: middle;">person</mat-icon>
+      <span style="vertical-align: middle;  margin-left: 5px;">{{ first_name }}
+      </span></button></li>
+  </ul>
+</div>
+  
+
+
+<div class="mat-elevation-z8 transfer-container">
+    <h2 class="mat-headline">Transfer Money</h2>
+  
+    <form (ngSubmit)="transferMoney()" #transferForm="ngForm" class="transfer-form">
+      <div class="input-group">
+        <mat-form-field class="source-field">
+          <mat-label>Source Account:</mat-label>
+          <mat-select name="sourceAccount" [(ngModel)]="transferFormModel['sourceAccount']" required>
+            <mat-option *ngFor="let account of sourceAccounts" [value]="account.acc_number">
+              {{ account.acc_number }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <mat-form-field class="destination-field">
+          <input matInput type="text" name="destinationAccount" [(ngModel)]="transferFormModel['destinationAccount']"
+                 placeholder="Destination Account" required>
+          <mat-error *ngIf="transferForm.controls['destinationAccount']?.hasError('required')">This field is required</mat-error>
+        </mat-form-field>
+      </div>
+  
+      <div class="input-group">
+        <mat-form-field class="amount-field">
+          <span class="input-group-addon">{{printCurrencySymbol()}}</span>
+          <input matInput type="number" name="amount" [(ngModel)]="transferFormModel['amount']" placeholder="Amount" required>
+          <mat-error *ngIf="transferForm.controls['amount']?.hasError('required')">This field is required</mat-error>
+        </mat-form-field>
+  
+        <mat-form-field class="description-field">
+          <input matInput type="text" name="description" [(ngModel)]="transferFormModel['description']" placeholder="Description" required>
+          <mat-error *ngIf="transferForm.controls['description']?.hasError('required')">This field is required</mat-error>
+        </mat-form-field>
+      </div>
+  
+      <button mat-raised-button color="primary" type="submit" [disabled]="transferForm.invalid">Transfer</button>
+    </form>
+  </div>

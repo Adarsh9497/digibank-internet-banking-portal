@@ -1,0 +1,91 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    
+  }
+  
+  .example-header {
+    min-height: 40px;
+    padding: 8px 24px 0;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }
+
+  .card {
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+  
+  
+  .mat-elevation-z8 {
+    width: 97%;
+    margin: 20px auto;
+    margin-bottom: 100px;
+  }
+  
+  table {
+    width: 80%;
+  }
+  
+  
+  .toolbar {
+    background-color: #205c60;
+    margin: 0;
+    padding-left: 10px;
+    padding-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .tablehover:hover{
+    background-color: #ecf8f9;
+  }
+
+  ul {
+    list-style-type: none;
+    margin-top: 20px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #205c60;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  button {
+    display: block;
+    padding: 15px;
+    background-color: #205c60;
+    color: white;
+    border: none;
+  }
+  
+  li button:hover {
+    background-color: #266E73;
+    color: white;
+    font-weight: 500;
+  }
+
+  .active {
+    background-color: white;
+    color: #266E73;
+    font-weight: 600;
+  }
+
+  input {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }

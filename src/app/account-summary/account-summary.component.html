@@ -1,0 +1,121 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+<div class="toolbar mat-elevation-z5">
+  <div style="display: inline">
+    <h1 style="color: white;display: inline; font-family: sans-serif; font-size: 30px;"> <i class="fas fa-university"
+        style="vertical-align: middle"></i>
+      <span style="vertical-align: middle;margin-left: 15px;">DIGIBANK</span>
+    </h1>
+    <p style="color: white;display: inline; margin-left: 50px">Internet Banking Portal</p>
+  </div>
+  <br>
+  <br>
+  <ul>
+    <li><button class="active"> <mat-icon style="vertical-align: middle;">dashboard</mat-icon><span
+          style="vertical-align: middle; margin-left: 5px;">Account Summary</span></button></li>
+    <li><button (click)="navigateToTransaction()"> <mat-icon style="vertical-align: middle;">history</mat-icon><span
+          style="vertical-align: middle; margin-left: 5px;">Transactions</span></button></li>
+    <li><button (click)="navigateToTransfer()"> <mat-icon style="vertical-align: middle;">swap_horiz</mat-icon><span
+          style="vertical-align: middle; margin-left: 5px;">Transfer Money</span></button></li>
+
+    <li style="float:right"><button (click)="logout()"><mat-icon style="vertical-align: middle;">exit_to_app</mat-icon>
+        <span style="vertical-align: middle;  margin-left: 5px;">Logout</span></button></li>
+    <li style="float:right"><button [routerLink]="['/profile', loggedInUser.fname]">
+        <mat-icon style="vertical-align: middle;">person</mat-icon>
+        <span style="vertical-align: middle;  margin-left: 5px;">{{ loggedInUser.fname }}
+        </span></button></li>
+  </ul>
+</div>
+
+<div class="box">
+  <div class="group">
+    <div class="overlap-group">
+      <div class="rectangle"></div>
+      <div class="text-wrapper">Account Summary</div>
+    </div>
+  </div>
+</div>
+
+
+<div style="display: flex; margin-bottom: 100px;" *ngIf="loggedInUser">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Account Number</th>
+        <th>Type</th>
+        <th>Balance</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let account of accounts">
+      <tr class="active-row" (click)="navigateToDetails(account.acc_number)">
+        <td><span>
+            <i class="fas fa-regular fa-building-columns"></i></span>
+          <span style="margin-left: 10px;"> {{ account.acc_number }}
+          </span>
+        </td>
+        <td>{{ account.acc_type }} </td>
+        <td>{{formatBalance(calculateEquivalentValue(account.balance))}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="min-width: 25%;">
+    <div class="card" style="display: flex; position: relative;">
+      Total Balance <span style="position: relative;margin-left: 50px;font-size: 23px;">{{formatBalance(calculateEquivalentValue(totalBalance))}}</span>
+    </div>
+    <br>
+    <div class="sub-card" >
+     <div style="bottom: 5px;position: relative;display: inline;vertical-align: middle;">My Cards</div> <mat-icon  style="display: inline;position: relative;;vertical-align: middle; left: 140px;bottom: 5px;">keyboard_arrow_right</mat-icon>
+    </div>
+    <br>
+    <div class="sub-card" >
+     <div style="bottom: 5px;position: relative;display: inline;vertical-align: middle;">Investments</div> <mat-icon  style="display: inline;position: relative;;vertical-align: middle; left: 140px;bottom: 5px;">keyboard_arrow_right</mat-icon>
+    </div>
+    <br>
+    <div class="sub-card" >
+     <div style="bottom: 5px;position: relative;display: inline;vertical-align: middle;">Loan Details</div> <mat-icon  style="display: inline;position: relative;;vertical-align: middle; left: 140px;bottom: 5px;">keyboard_arrow_right</mat-icon>
+    </div>
+    <br>
+    <div class="sub-card" >
+     <div style="bottom: 5px;position: relative;display: inline;vertical-align: middle;">Notifications</div> <mat-icon  style="display: inline;position: relative;;vertical-align: middle; left: 140px;bottom: 5px;">keyboard_arrow_right</mat-icon>
+    </div>
+    <br>
+    <div class="sub-card" >
+     <div style="bottom: 5px;position: relative;display: inline;vertical-align: middle;">Add Payee</div> <mat-icon  style="display: inline;position: relative;;vertical-align: middle; left: 140px;bottom: 5px;">keyboard_arrow_right</mat-icon>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <div >
+  <div class="card">
+    <h2 style="margin:20px">Welcome, {{ first_name }}!</h2>
+    <mat-table [dataSource]="accounts">
+      <ng-container matColumnDef="acc_number">
+        <mat-header-cell *matHeaderCellDef> Account Number </mat-header-cell>
+        <mat-cell *matCellDef="let account"><a [routerLink]="['/account-details', account.acc_number]">{{
+            account.acc_number }}</a> </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="acc_type">
+        <mat-header-cell *matHeaderCellDef> Account Type </mat-header-cell>
+        <mat-cell *matCellDef="let account"> {{ account.acc_type }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="balance" *ngIf="accounts">
+        <mat-header-cell *matHeaderCellDef> Balance </mat-header-cell>
+        <mat-cell *matCellDef="let account">{{ formatBalance(calculateEquivalentValue(account.balance)) }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="details">
+        <mat-header-cell *matHeaderCellDef> Details </mat-header-cell>
+        <mat-cell *matCellDef="let account"> <button
+            [routerLink]="['/account-details', account.acc_number]">Details</button></mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="['acc_number', 'acc_type', 'balance','details']"></mat-header-row>
+      <mat-row *matRowDef="let account; columns: ['acc_number', 'acc_type', 'balance','details']"></mat-row>
+    </mat-table>
+  </div>
+</div> -->

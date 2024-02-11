@@ -1,0 +1,89 @@
+
+.mat-elevation-z8 {
+  width: 80%;
+  margin: 20px auto;
+}
+
+table {
+  width: 100%;
+}
+
+.active {
+  background-color: white;
+  color: #266E73;
+  font-weight: 600;
+}
+
+.toolbar {
+  background-color: #205c60;
+  margin: 0;
+  padding-left: 10px;
+  padding-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+ul {
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #205c60;
+}
+
+li {
+  float: left;
+}
+
+button {
+  display: block;
+  padding: 15px;
+  background-color: #205c60;
+  color: white;
+  border: none;
+}
+
+li button:hover {
+  background-color: #266E73;
+  color: white;
+  font-weight: 500;
+}
+
+  /* transfer.component.scss */
+
+/* transfer.component.scss */
+
+.transfer-container {
+  max-width: 500px;
+  margin-left: 50px;
+  float: left;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.transfer-form {
+  display: flex;
+  flex-direction: column;
+
+  .input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    .source-field,
+    .destination-field,
+    .amount-field,
+    .description-field {
+      width: 48%;
+    }
+  }
+
+  button {
+    margin-top: 16px;
+  }
+}
